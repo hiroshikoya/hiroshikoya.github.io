@@ -28,3 +28,5 @@ puts charlie.hello
 # >> Hello, friend!
 # >> My name is Charlie!
 {% endhighlight %}
+
+{% tweet https://twitter.com/DEVOPS_BORAT/status/159849628819402752 align='center' %}
