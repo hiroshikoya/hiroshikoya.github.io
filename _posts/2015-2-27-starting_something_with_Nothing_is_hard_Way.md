@@ -30,8 +30,8 @@ Android Studio使って開発始めた．
 
 [Androidアプリ開発入門](http://androidguide.nomaki.jp/index.html)  : 動くサンプルを作るならこれ読んで手を動かせばオッケーなんじゃないかと．  
 [アプリのレイアウト作成](http://mixi-inc.github.io/AndroidTraining/fundamentals/2.01.create-layout.html)   :
-構造がわからなくて今読んでる．
-[AndroidStudio × Genymotion で　Google Maps Android API v2を動かすメモ Android](http://qiita.com/katco/items/1a274ba6634176db8ea0):いきなり読み始めた認証鍵とかは後でつながってくるはず．
+構造がわからなくて今読んでる．  
+[AndroidStudio × Genymotion で　Google Maps Android API v2を動かすメモ Android](http://qiita.com/katco/items/1a274ba6634176db8ea0):いきなり読み始めた認証鍵とかは後でつながってくるはず．  
 
 やむないので手を動かすことを優先する．
 
