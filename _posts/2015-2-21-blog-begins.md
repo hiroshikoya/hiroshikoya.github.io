@@ -30,4 +30,5 @@ puts charlie.hello
 {% endhighlight %}
 
 <br/>
-{% tweet https://twitter.com/DEVOPS_BORAT/status/159849628819402752 align='center' %}
+{% render_time %}
+{¥% tweet https://twitter.com/DEVOPS_BORAT/status/159849628819402752 align='center' ¥%}
