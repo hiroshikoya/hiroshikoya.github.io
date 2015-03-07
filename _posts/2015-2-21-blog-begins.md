@@ -30,5 +30,5 @@ puts charlie.hello
 {% endhighlight %}
 
 <br/>
-{% render_time %}
+{% render_time page rendered at: %}
 {¥% tweet https://twitter.com/DEVOPS_BORAT/status/159849628819402752 align='center' ¥%}
