@@ -71,8 +71,9 @@ E4X XMLList オブジェクト 	|"xml"
 >when you call methods on it, you’re doing so over a COM bridge and not calling native JavaScript.  
 >Basically that’s MS’s answer if you try to test or access something that’s not a true part of the JScript engine.  
   
-要はSHellの世界のオブジェクトが渡されていて、これがIUnnownというインターフェースを継承しているからデバッグするとこんな返り値になっているぽい.
-ShellScriptに詳しい人に聞いたら、JScriptでは64bitのIntegerを正しく認識してくれないとのこと.  
+要はSHellの世界のオブジェクトが渡されていて、これがIUnnownというインターフェースを継承しているからデバッグするとこんな返り値になっているぽい.  
+さらにShellScriptに詳しい人に聞いてみたら、  
+JScriptでは64bitのIntegerを正しく認識してくれないかもしれないとのこと.  
   
 [この記事](http://bytes.com/topic/javascript/answers/146461-int64-method-com-into-javascript)にも以下のような記載がありました.
 
@@ -87,14 +88,18 @@ bits available for the floating-point number some bits are required
 for the exponent (the stored value is 9.2233720368547760E18):
   
   
-IE8だけで起こったのは,どうもIE8で動いているのはJScriptで,こいつのハンドリングがいけてないぽい.  
-IE9で動いているのはChakraというもので，Javascriptのエンジンが異なっていて，この違いが両者の挙動の違いを生んでいる模様．  
+##ブラウザで動くJavaScriptエンジンの話    
+***
+
+IE8だけで起こったのは,どうもIE8でJavaScriptを動かしてるのはJScriptで,こいつのハンドリングがいけてないぽい.  
+IE9でJavaScriptエンジンはChakraというやつで，このエンジンの違いが両者の挙動の違いを生んでいる模様．  
   
   
 [JavaScript エンジン Chakra を無理矢理使う。|ういはるかぜの化学](https://subtech.g.hatena.ne.jp/mayuki/20111216/1324015296)   
   
 
-こういうのはほとんど歴史の話といっていいくらい過去の話なんだろうけど,経緯とかわかるのは個人的には非常に面白いと感じた．  
+事象としてはほとんど歴史の話といっていいくらい過去の話なんだろうけど,  
+経緯とかわかるのは個人的には非常に面白いと感じた．  
   
 ***  
   
