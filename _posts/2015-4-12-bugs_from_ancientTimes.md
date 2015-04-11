@@ -74,7 +74,7 @@ E4X XMLList オブジェクト 	|"xml"
 さらにShellScriptに詳しい人に聞いてみたら、  
 JScriptでは64bitのIntegerを正しく認識してくれないかもしれないとのこと.  
   
-[この記事](http://bytes.com/topic/javascript/answers/146461-int64-method-com-into-javascript)にも以下のような記載がありました.
+[この事例](http://bytes.com/topic/javascript/answers/146461-int64-method-com-into-javascript)にも以下のような記載がありました.
 
 >I think in fact *you* do. Since ECMAScript and implementations use
 IEEE-754 doubles only, there is no exact representation of a 64 bit
@@ -101,7 +101,7 @@ IE8だけで起こったのは,どうもIE8でJavaScriptを動かしてるのは
 ##まとめ  
   
 事象としてはほとんど歴史の話といっていいくらい今となってはどうでもいい話だろうけど,  
-[この辺の話](http://ja.wikipedia.org/wiki/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E6%88%A6%E4%BA%89#.E7.AC.AC.E4.BA.8C.E6.AC.A1.E3.83.96.E3.83.A9.E3.82.A6.E3.82.B6.E6.88.A6.E4.BA.89)を体感した感じというか,ちょっと明らかな改善?というか違いだったので個人的には面白いと感じた．  
+[この辺](http://ja.wikipedia.org/wiki/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E6%88%A6%E4%BA%89#.E7.AC.AC.E4.BA.8C.E6.AC.A1.E3.83.96.E3.83.A9.E3.82.A6.E3.82.B6.E6.88.A6.E4.BA.89)を体感した感じというか,ちょっと明らかな改善?というか違いだったので個人的には面白いと感じた．  
   
 ***  
   
@@ -110,4 +110,4 @@ IE8だけで起こったのは,どうもIE8でJavaScriptを動かしてるのは
 それはまた別のPOSTとして書こうと思う.(まだよく調べてはいない)  
   
 ActiveXはいよいよサポートされなくなるぽいのだけど.   
-ActiveXに依存していたアプリ感の連携とかどうしていくことになってるのかちょっと気にならないではない.  
+ActiveXに依存していたアプリケーションの連携とかどうしていくことになってるのかとかちょっと気にならないではない.  
