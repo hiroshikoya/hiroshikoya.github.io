@@ -9,22 +9,24 @@ IE8の話.
 誰が興味あるのかという感じの話だけど，ちょっと広がりを感じたので,備忘的にまとめる．  
 色々と叩く機会があり,挙動としてIE9と大きく異なると思うことがある．  
   
-##ぶつかった問題  
+##起こった事象  
 ***
 直近でぶつかった問題でこういうのがあった．  
+JavaScriptからActiveXを使って,ウィンドウの参照を取りたくて以下のようなスクリプトを使った.
   
-Set ie_ = CreateObject("Shell.Application").Windows(0)  
+Var ie_ = CreateObject("Shell.Application").Windows(0)  
   
-で返ってくるのがShellWindowsオブジェクトの参照キー(ハンドルというらしい)を返してくる.  
+こんな感じで呼ぶと返ってくるのがShellWindowsオブジェクトの参照キー(ハンドルというらしい).  
   
-これがぱっと見,数値に見えるのだけど数値として比較すると,アクセスできないとか言われてエラーになる.  
+この値がぱっと見,数値に見えるのだけどJavaScript上で参照すると,アクセスできないとか言われてエラーになった.  
 (IE8でだけ.IE9では普通に動いた)  
   
 typeof ie_   
   
 とかやると'unknown'とか出力される。  
 そもそもtypeof演算子で'unknown'とかあるの？？という.  
-
+  
+  
 [typeof演算子:MSDN](https://msdn.microsoft.com/ja-jp/library/ie/259s7zc1%28v=vs.94%29.aspx)   
 
 >typeof 演算子は、型情報を文字列で返します。  
@@ -49,7 +51,8 @@ E4X XMLList オブジェクト 	|"xml"
   
   
 今回の'unknown'てなんなの。  
-この変数にie_+1とかやると,ブランクが返ってきたり,全く以ってなんだかよくわからなかった.  
+この変数にie_+1とかやると,ブランクが返ってきたり,挙動もなんだか怪しい.  
+全く以ってなんだかよくわからなかった.  
   
   
 ##色々見ていった結果  
@@ -65,9 +68,32 @@ E4X XMLList オブジェクト 	|"xml"
 >Basically that’s MS’s answer if you try to test or access something that’s not a true part of the JScript engine.  
   
 
-どうもIE8で動いているのはJScriptで、IE9で動いているのはChackraというエンジンでこの違いが両者の挙動の違いを生んでいる模様．  
+ShellScriptに詳しい人に聞いたら、JScriptでは64bitのIntegerを正しく認識してくれないとのこと.  
   
-ShellScriptに詳しい人に聞いたら、JScriptでは32bitのIntegerを正しく認識してくれないらしい.
-  
-こういうのはほとんど歴史の話であるが,個人的には非常に面白いと感じる．  
+[この記事](http://bytes.com/topic/javascript/answers/146461-int64-method-com-into-javascript)に以下のような記載がありました.
 
+>I think in fact *you* do. Since ECMAScript and implementations use
+IEEE-754 doubles only, there is no exact representation of a 64 bit
+integer value in these languages. 
+> Proof: The largest value a signed
+64 bit integer can hold is (2^63)-1 (1 MSB + 63 bits) which is
+9223372036854775807. However, JavaScript (v1.5 in Mozilla Firefox)
+returns 9223372036854776000 for Math.pow(2, 63)-1 because of the 64
+bits available for the floating-point number some bits are required
+for the exponent (the stored value is 9.2233720368547760E18):
+  
+  
+IE8だけで起こったのは,どうもIE8で動いているのはJScriptで,Javascriptのエンジンが異なる模様.  
+IE9で動いているのはChakraというもので，この違いが両者の挙動の違いを生んでいる模様．  
+  
+  
+[JavaScript エンジン Chakra を無理矢理使う。|ういはるかぜの化学](https://subtech.g.hatena.ne.jp/mayuki/20111216/1324015296)   
+  
+
+こういうのはほとんど歴史の話といっていいくらい過去の話なんだろうけど,経緯とかわかるのは個人的には非常に面白いと感じる．  
+  
+***  
+  
+  
+じゃー新しいブラウザ**Spartan**ではどうなるの？とかなんとなく気になったんだけど,  
+それはまた別のPOSTとして書こうと思う.
