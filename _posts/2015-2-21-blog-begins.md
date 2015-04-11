@@ -30,4 +30,4 @@ puts charlie.hello
 {% endhighlight %}
 
 <br/>
-{% render_time page rendered at: %}
+{¥% render_time page rendered at: ¥%}
