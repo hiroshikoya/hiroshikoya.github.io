@@ -18,8 +18,10 @@ Var ie_ = CreateObject("Shell.Application").Windows(0)
   
 こんな感じで呼ぶと返ってくるのがShellWindowsオブジェクトの参照キー(ハンドルというらしい).  
   
-この値がぱっと見,数値に見えるのだけどJavaScript上で参照すると,アクセスできないとか言われてエラーになった.  
+この値がぱっと見,数値に見えるのだけどJavaScript上で数値比較とかすると,アクセスできないとか言われてエラーになった.  
 (IE8でだけ.IE9では普通に動いた)  
+  
+さらに,  
   
 typeof ie_   
   
@@ -49,8 +51,8 @@ E4X XML オブジェクト 	|"xml"
 E4X XMLList オブジェクト 	|"xml"  
 他のオブジェクト 	|"object"  
   
-  
-今回の'unknown'てなんなの。  
+    
+今回の'unknown'てなんなの。'undefined'じゃないの.  
 この変数にie_+1とかやると,ブランクが返ってきたり,挙動もなんだか怪しい.  
 全く以ってなんだかよくわからなかった.  
   
@@ -67,10 +69,10 @@ E4X XMLList オブジェクト 	|"xml"
 >when you call methods on it, you’re doing so over a COM bridge and not calling native JavaScript.  
 >Basically that’s MS’s answer if you try to test or access something that’s not a true part of the JScript engine.  
   
-
+要はSHellの世界のオブジェクトが渡されていて、これがIUnnownというインターフェースを継承しているからデバッグするとこんな返り値になっているぽい.
 ShellScriptに詳しい人に聞いたら、JScriptでは64bitのIntegerを正しく認識してくれないとのこと.  
   
-[この記事](http://bytes.com/topic/javascript/answers/146461-int64-method-com-into-javascript)に以下のような記載がありました.
+[この記事](http://bytes.com/topic/javascript/answers/146461-int64-method-com-into-javascript)にも以下のような記載がありました.
 
 >I think in fact *you* do. Since ECMAScript and implementations use
 IEEE-754 doubles only, there is no exact representation of a 64 bit
@@ -83,14 +85,14 @@ bits available for the floating-point number some bits are required
 for the exponent (the stored value is 9.2233720368547760E18):
   
   
-IE8だけで起こったのは,どうもIE8で動いているのはJScriptで,Javascriptのエンジンが異なる模様.  
-IE9で動いているのはChakraというもので，この違いが両者の挙動の違いを生んでいる模様．  
+IE8だけで起こったのは,どうもIE8で動いているのはJScriptで,こいつのハンドリングがいけてないぽい.  
+IE9で動いているのはChakraというもので，Javascriptのエンジンが異なっていて，この違いが両者の挙動の違いを生んでいる模様．  
   
   
 [JavaScript エンジン Chakra を無理矢理使う。|ういはるかぜの化学](https://subtech.g.hatena.ne.jp/mayuki/20111216/1324015296)   
   
 
-こういうのはほとんど歴史の話といっていいくらい過去の話なんだろうけど,経緯とかわかるのは個人的には非常に面白いと感じる．  
+こういうのはほとんど歴史の話といっていいくらい過去の話なんだろうけど,経緯とかわかるのは個人的には非常に面白いと感じた．  
   
 ***  
   
