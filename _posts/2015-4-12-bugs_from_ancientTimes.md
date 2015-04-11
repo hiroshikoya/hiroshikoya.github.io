@@ -33,19 +33,19 @@ typeof ie_
 [typeof演算子](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/typeof)   
   
 >以下は typeof が返す事が出来る値（文字列）の一覧表です。 JavaScript data   structureにデータ型(types)とプリミティブについての詳しい情報があります。  
->型 | 戻り値 
->:----- | :------:  
->未定義   | "undefined"  
->Null   | "object"  
->真偽値   | "boolean"  
->数値 	|"number"  
->文字列 	|"string"  
->シンボル (ECMAScript6 で新しく導入) |	"symbol"  
->ホストオブジェクト (provided by the JS environment) |実装に委ねる    
->関数オブジェクト (implements [[Call]] in ECMA-262 terms) 	|"function"    
->E4X XML オブジェクト 	|"xml"  
->E4X XMLList オブジェクト 	|"xml"  
->他のオブジェクト 	|"object"  
+型 | 戻り値 
+:----- | :------:  
+未定義   | "undefined"  
+Null   | "object"  
+真偽値   | "boolean"  
+数値 	|"number"  
+文字列 	|"string"  
+シンボル (ECMAScript6 で新しく導入) |	"symbol"  
+ホストオブジェクト (provided by the JS environment) |実装に委ねる    
+関数オブジェクト (implements [[Call]] in ECMA-262 terms) 	|"function"    
+E4X XML オブジェクト 	|"xml"  
+E4X XMLList オブジェクト 	|"xml"  
+他のオブジェクト 	|"object"  
   
   
 今回の'unknown'てなんなの。  
