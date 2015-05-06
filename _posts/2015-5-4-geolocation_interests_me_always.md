@@ -8,7 +8,7 @@ tags: [IE,twitter,android,tech]
 Finally, my first app for Android shipped, so I'm going to write some about this.
 Although it still has some bugs to be fixed, it gained me some experience, so I will write it down here.
 
-##About AN APPa.  
+##About AN APP.  
 ***
 
 First, show you what I've developed : [SONAA TWEET](https://play.google.com/store/apps/details?id=com.sonaatweet.koya.sonaa)
@@ -24,7 +24,7 @@ And also, Twitter is very interesting media, so wanted to use some of APIs given
     
 
 ##About FABRICs & Twitter APIs
-  
+***  
 FABRIC.io is a plugin to use some of TWITTER developments. 
 It was very easy to use, very graphical introduction, implements many sample codes too. 
   
@@ -36,7 +36,7 @@ As I tried several times, I can't get any tweets when I gave some geoinfo to Twi
 Maybe it's related to some matter of security problems...
 
 ##About DEVELOPMENT IN ANDROID STUDIO.
-
+***  
 As I've got used to Eclipse based IDE, I need some time to get used to Intellij kind of IDE.
 It makes me new feeling that it no longer need to press cmd+s to save source.  
   
