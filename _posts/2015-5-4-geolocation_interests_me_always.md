@@ -29,7 +29,7 @@ FABRIC.io is a plugin to use some of TWITTER developments.
 It was very easy to use, very graphical introduction, implements many sample codes too. 
   
 But to use APIs in a apps like my apps, it has some difficulty to achieve what I wanted to do first.  
-It has some bugs related to geocodes: []().  
+It has some bugs related to geocodes: [Search API returning (very) sparse geocode results](https://twittercommunity.com/t/search-api-returning-very-sparse-geocode-results/27998).  
   
 You can't get enough tweets to show, and it seems to search Tweet by API be limited in certain period.
 As I tried several times, I can't get any tweets when I gave some geoinfo to Twitter API.
