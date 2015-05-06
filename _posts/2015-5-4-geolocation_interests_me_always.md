@@ -5,9 +5,9 @@ date: 2015-05-04
 tags: [IE,twitter,android,tech]
 ---
 
-Finally, my first app for Android shipped, so I'm going to write some about this.
-Although it still has some bugs to be fixed, it gained me some experience, so I will write it down here.
-
+Finally, my first app for Android shipped, so I'm going to write some about this.  
+Although it still has some bugs to be fixed, it gained me some experience, so I will write it down here.  
+  
 ##About AN APP.  
 ***
 
@@ -47,5 +47,6 @@ Though it took more time to launch one app than I estimated, it was not so diffi
 My app is still so coarse, needs more update...  
   
   
-なんか社内マターで英文書く必要あったが一向に進まず、むしゃくしゃしてこっちも英語で書き始めた。  
-めんどくせー。。。
+なんか社内マターで英文書く必要あったが一向に進まず,むしゃくしゃしてこっちも英語で書き始めた.  
+もっと詳細には色々気づき(アプリのデザイン.表示にフィルタを掛けるべき.検索タイミング.Tipsとか.)があるんだけど総括というか.とりあえず.  
+社内マターのめんどくささ半端ないー...  
