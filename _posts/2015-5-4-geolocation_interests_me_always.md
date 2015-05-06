@@ -8,7 +8,7 @@ tags: [IE,twitter,android,tech]
 Finally, my first app for Android shipped, so I'm going to write some about this.  
 Although it still has some bugs to be fixed, it gained me some experience, so I will write it down here.  
   
-##About AN APP.  
+##About an APP.  
 ***
 
 First, show you what I've developed : [SONAA TWEET](https://play.google.com/store/apps/details?id=com.sonaatweet.koya.sonaa)
